@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		document.write("Kalpesh"+ "<br> ");
+		// if u dont want change the assigned value use const instead of var or let. 
+		const name = "Manohar" + "<br>";
+		document.write(name);  // .indexOf("o") lowercase split('') slice(5) charAt() 
+
+		let nav = "Rahate";
+		document.write(nav);
+		//console.log(`My name is ${name} and i am ${nav}`);		//Tamplate string
+
+		let isApproved = false;
+		let lastName;		//undefined
+		let selectColor = null;
+
+		let person ={
+		 firstName : "kalpesh",
+		 age : 22
+	};
+
+	person.name = 'man';
+	console.log( 'Hey' +' '+ person.name,person);
+	
+		/*const personJSON = JSON.stringify(person);
+	console.log(personJSON);*/
+
+	let colors = ["red", 'green', 'blue'];
+	colors[3] = 'yellow'; 
+	console.log(colors);
+	console.log(colors.length);
+
+	function square(num) {
+		return num * num;
+	}
+
+	//console.log(square(6));		//another way of calling function
+	let number = square(8);
+	console.log(number);
+
+	let fruits = ["apple", "banana", "watermelon"];
+	fruits.push("mango", "orange");
+	//.unshift(to add element at th begining) .pop(remove)
+	//console.log(fruits);
+
+	for (var i = 0; i <= fruits.length; i++) {
+		//console.log(`For Loop number: ${i}`);
+		console.log(fruits[2]);
+	}
+
+	//while
+	let j = 0;
+	while(j < fruits.length){
+		console.log(fruits);
+		j++;
+	}
+
+	//(=== means if x is a string then condition is not true & == means if x is a string still condition is true)
+	
+	let x = 9;
+	if(x===10){
+		console.log("x is 10");
+	} else if (x > 10){
+		console.log("x is greater than 10");
+	} else{
+		console.log("x is less than 10");
+	}
+
+	//ternary operator - shorthand for if
+	let education = x > 10 ?"greater" : "less";
+	console.log(education);
+
+	switch(education){
+		case "greater": console.log("He is in College");
+		break;
+		case "less" : console.log("He is in School");
+		break;
+		default: console.log("He is not studying");
+		break;
+	}
+
+	function Person(fName, lName, dob) {
+		this.fName = fName;
+		this.lName = lName;
+		this.dob = new Date(dob);
+	}
+	let funcall = new Person("Kalpesh", "Rahate", "10-13-1997");
+	console.log(funcall.dob.getFullYear());
+
+	//class works same as a function 
+	/*class Person{
+		constructor(fName, lName, dob) {
+		this.fName = fName;
+		this.lName = lName;
+		this.dob = new Date(dob);
+	}
+	}
+	let funcall = new Person("Kalpesh", "Rahate", "10-13-1997");
+	console.log(funcall.dob.getFullYear());*/
+
+
+
+	function factorial() {
+		let fact = 1;
+		let n=6;
+		for (let i=1; i <= n; i++){
+			document.write(fact = fact*i + " \ ");
+		}
+	}
+
+   /* let ans = new factorial();
+	console.log(ans);*/
+
+	/*function fibo(){
+		let n = 6;
+		let n3, n1=0, n2=1;
+		document.write(n1+ " " + n2);
+		for(let i=2; i<=n; ++i){
+			n3 = n1 + n2;
+			document.write(" "+n3);
+			n1=n2;
+			n2=n3;
+		}
+	}*/
+	/*let ans = new fibo();
+	console.log(ans);*/
+	
+	</script>
+	<br>
+	<button onclick="factorial()">Click Me</button>
+</body>
+</html>

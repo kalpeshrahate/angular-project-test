@@ -1,0 +1,132 @@
+JAVASCRIPT:- JS is a general purpose programming language which is used to perform client side validation. The js engine was invented by brendan eich at netscape.
+  for netscape navigator wed browser. JS is one of the core technologies, from WWW js enables interactive web pages. Js supports event driven functional and object oriented 
+  programming style. It has API's working for text, array, dates, regular expression, DOM(document object model) initially js implemented only on client side web browser but
+ nowadays js engines are ambedded in many other types of host s/w. Js adds functionality to web pages. It adds programming logic to the functions it performs event full effects
+ transition, animation. Js can be written in a two ways internaljs and externaljs. Internaljs is written in <script> and script can be written in head as well as body of 
+ the html page. In externaljs we can use js written outside the current page using <script>. To access the elements and data we need an object Dom structure provides us 
+ document object.
+
+Disadvantages - Js does not specify the data type of variable. Does not give compile time error.
+
+***DOM architecture:-
+
+***Data types-
+	It is keyword that is use to represent what type of data we are using to perform an operation but in js there is only one keyword used to write syntax of data type 
+ syntax- var a= "___";
+ Internally var keyword adapts properties of following data types no.,char,string,array. 
+
+***JS variables-
+	variables are used to store the values. It is called as vriables bcoz it varies its value by replacing , editing, deleting, modifying the values. there are two types of 
+variables global and local variables.
+1. global- The variables which are accessible throughout the program is known as global variables.
+2. local- The variables which are accessible only for the spcific block are known as local variables. 
+
+***JS operators- 
+	Operators are used to perform an operation using 2 or more operands
+Types- arithmatic operators- this are used to perform an arithmatic operation +,-,/,*.
+comparison operators- this are used to compare 2 or more operands =,!=,<,>,<=,>=.
+Logical operators- Performs logical operators. &,or,not.
+assignment operators- =,+=(x=10, x+=y(x=x+y)).
+conditional operators- =,!=,<,>,~,<=,>=.
+String operators- + This operators is use to concatinate 2 strings.
+Type operators- this operator is used to determine the type of data being stored in var 
+1. typeOf- this operator returns the data type of the var.
+2. instanceOf- this operator returns true if given object is instanceof object type 
+Bitwise operators- work on 32 bit nos. any operand in operation is converted into 32 bit no. The result converted back to js no. 
+Ternary operators- var votable= (age>18)? "eligible":"not eligible";
+
+
+***Functons in Js-
+	Block of writting logical operators is known as functions. 
+function add()
+{
+block of code
+}	
+ There are two types of functions-
+1. Default function- The function which does not contain the parameters is known as default functions
+2. Parameteraised function- The function which contains the parameters is known as parameterized function.
+function (var a, var b)
+
+Parameters types -
+1. formal- The para which are passing variable names at the time of declaration is known as formal parameters.
+2. actual- The parameters which are passing actual values while calling function is konwn as actual parameters.
+
+*** Control statement theory-
+	1. if  2.if..else  3.nestedif  4.if...elseif  5.while  6.do while  7.for  8.switch case
+
+While And do...While
+while(condition)
+{ statements; }
+
+do{statement} while(condition)
+
+***JS built in methods -
+	getElementById();
+	getElementsByTagName();
+	getElementsByClassName();- class name can be apply where multiple tags has been used.
+	Used to access data from the html elements in a script tag. To perform operations on that data we must call those methods by using their selectors. Such as Id, 
+	classname ,attribute,tagname. To call this methods object is required and document object model structure provides main object as documents.
+
+
+***Events -
+	It is an action to be performed, it takes events such as onClick(), onmouseover, onMouseout(), onHover(), onFocus().
+
+
+
+***Regular Expression - 
+	Is an collection of an symbols that forms a pattern to be match with given data. By using regular expression we can check for particular charater at a particular locations and also check particular
+range.
+/  / - We can write regular pattern in between.
+[^] - To exclude 
+[a-z] - To represent alphabets.
+[a-z A-Z] -    -//-.
+[0-9] - Represent nos.
+/abc /i - Insensetive
+{9} - Represents the length. 
+? - It makes right next pattern optional
+\d - It matches any digit which equal to 0-9.
+\w - Matches with character, digit, _.
+\s - Matches white space or tab.
+\t - matches with only tab.
+^ - Starting point or a 1st character.
+\n - Line break.
+$ - End of the pattern.
+. - It is a wild card entry.
+\. - To insert dot.
+{2,10} - Range from min to max 
++ - It increases length dynamically of a pattern.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

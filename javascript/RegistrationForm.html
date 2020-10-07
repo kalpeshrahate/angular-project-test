@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Registration Form</title>
+
+	<!-- <meta charset="UTF-8"> -->
+
+	<script type="text/javascript">
+		function validate()
+		{
+			var firstname = f1.firstname.value;
+			var lastname = f1.lastname.value;
+			var address = f1.address.value;
+
+			var contact = document.getElementById ("text4").value;		//mobile number validation
+			var regx1 =/^[7-9][0-9]{9}$/;
+
+			var mail = document.getElementById("text5").value;		//mail validation
+			var regx =/^([a-z-0-9\.]+)@([a-z-0-9]+).([a-z]{2,8})(.[a-z]{2,8})?$/;
+
+			var password = document.getElementById("text6").value;
+			var regx2 = /^([a-z-A-Z-0-9 @!#$%^&*]{8,20})$/
+
+			//var gender = f1.Gender.value;
+			/*var password = f1.password.value;*/
+			
+			if(firstname == null || firstname == ""){
+				//alert("Enter Valid First Name");
+				document.getElementById("lbtext1").innerHTML = "Invalid";
+				document.getElementById("lbtext1").style.visibility = "visible";
+				document.getElementById("lbtext1").style.color = "red";
+			}
+			if(lastname == null || lastname == ""){
+				//alert("Enter Valid Last Name");
+				document.getElementById("lbtext2").innerHTML = "Invalid";
+				document.getElementById("lbtext2").style.visibility = "visible";
+				document.getElementById("lbtext2").style.color = "red";
+			}
+			if(address == null || address ==""){
+				//alert("Enter Valid Address");
+				document.getElementById("lbtext3").innerHTML = "Invalid";
+				document.getElementById("lbtext3").style.visibility = "visible";
+				document.getElementById("lbtext3").style.color = "red";
+			}
+
+			if(regx1.test(contact))
+			{
+				document.getElementById("lbtext4").innerHTML = "valid";
+				document.getElementById("lbtext4").style.visibility = "visible";
+				document.getElementById("lbtext4").style.color ="green";
+			}
+			else
+			{
+				document.getElementById("lbtext4").innerHTML = "Invalid";
+				document.getElementById("lbtext4").style.visibility = "visible";
+				document.getElementById("lbtext4").style.color = "red";
+			}
+			if(regx.test(mail)){
+				document.getElementById("lbtext5").innerHTML = "Valid";
+				document.getElementById("lbtext5").style.visibility = "visible";
+				document.getElementById("lbtext5").style.color ="green";
+			}
+			else 
+			{
+				document.getElementById("lbtext5").innerHTML ="Invalid";
+				document.getElementById("lbtext5").style.visibility = "visible";
+				document.getElementById("lbtext5").style.color ="red";
+			}
+
+			if (regx2.test(password)) {
+				document.getElementById("lbtext6").innerHTML = "Valid";
+				document.getElementById("lbtext6").style.visibility = "visible";
+				document.getElementById("lbtext6").style.color = "green"; 
+			}
+			else{
+				document.getElementById("lbtext6").innerHTML = "Invalid";
+				document.getElementById("lbtext6").style.visibility = "visible";
+			}
+			
+			if(f1.gender[0].checked == false && f1.gender[1].checked == false){
+				alert("Select Gender");
+			}
+			/*if(password == null || password == ""){
+				//alert("Enter Valid Password")
+				document.getElementById("lbtext6").innerHTML ="Invalid";
+				document.getElementById("lbtext6").style.visibility = "visible";
+				document.getElementById("lbtext6").style.color ="red";
+			}*/
+
+
+		}
+
+	</script>
+
+</head>
+<body background="10.jpg" >
+
+	<table align="center">
+<center>
+<h1><I>Register</I></h1>
+</center>
+<hr>
+
+<form id = "f1">
+	<tr>
+		<td>
+			<b>
+	        First Name :
+	    	</b>
+	    </td>
+	     	<td> 
+      			<input type="text" id="text1" name="firstname" /> 
+      		</td>
+      		<td>
+      			<label id="lbtext1" style="color : red; visibility: hidden">Invalid</label>
+      		</td>
+    </tr>
+      <td>&nbsp;</td>
+
+	<tr>
+		<td>
+			<b>
+			Last Name : 
+			</b>
+		</td>
+			<td>
+				<input type="text" id ="text2" name="lastname" />
+			</td>
+			<td>
+				<label id="lbtext2" style="color : red; visibility: hidden">Invalid</label>
+			</td>
+	</tr>
+		<td>&nbsp;</td>
+
+	<tr>
+		<td>
+			<b>
+			Address :
+			</b> 
+		</td>
+			<td>
+				<input type="text" id ="text3" name="address" />
+			</td>
+			<td>
+				<label id="lbtext3" style="color : red; visibility: hidden;">Invalid</label>
+			</td>
+	</tr>
+		<td>&nbsp;</td>
+
+	<tr>
+		<td>
+			<b>
+			Contact No :
+		    </b>
+		</td>
+			<td>
+ 				<input type="text" id="text4" name="contact " />
+ 			</td>
+ 				 <td>
+ 					<label id="lbtext4" style="color : red; visibility: hidden;">Invalid</label>
+				</td>
+ 	</tr>
+ 	<td>&nbsp;</td>
+
+	<tr>
+		<td>
+			<b>
+			Email :
+			</b>
+		</td>
+			<td>
+ 				<input type="text" id="text5" name="email" />
+ 			</td>
+ 				<td>
+  					<label id = "lbtext5" style ="color: red; visibility: hidden;"> Invalid </label>	
+ 				 </td>
+ 	</tr>
+ 	<td>&nbsp;</td>
+
+	<tr>
+		<td>
+			<b>
+			Gender : 
+			</b>
+		</td>	
+		<td><b>
+			Male 
+			</b>
+			 <input type="radio" name="gender" value="male">
+		<b>
+			Female 
+			</b>
+			 <input type="radio" name="gender" value="female">
+		</td>
+
+	</tr>		
+	<td>&nbsp;</td> 
+
+    <tr>
+    	<td>
+    		<b>
+ 			Password :
+ 			</b>
+ 		</td>
+ 			<td>
+ 				<input type="password" id ="text6" name="password">
+ 			</td>
+ 			<td>
+ 				<label id="lbtext6" style="color : red; visibility: hidden">Invalid</label>
+ 			</td>
+ 	</tr>
+ 	<td>&nbsp;</td>
+
+    <tr>
+    	<td>
+			<input type="button" value ="Submit" onclick = "validate()">
+		</td>
+		<td>
+			<button>Reset</button>
+		</td>
+	</tr>
+</form>
+</table>
+</body>
+</html>   

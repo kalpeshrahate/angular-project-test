@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		console.log("this is printed in console");
+		document.write("printed on page");
+		/*function myFunction(){
+		var a = document.getElementsByTagName('h2').innerHTML;
+		var name = document.getElementById('t2').innerHTML;
+		alert(a);
+		}*/
+		
+		function myFunction() {
+  		var x = document.getElementsByClassName("para");
+  		x[0].style.background = "red";
+		}
+
+		function addNode() { var newP = document.createElement("p"); 
+	var textNode = document.createTextNode(" This is a new text node"); 
+	newP.appendChild(textNode); 
+	document.getElementById("firstP").appendChild(newP); }
+
+	</script>
+</head>
+<body>
+	 
+	<p id="t2">Chaii pilo</p>
+	<h2>Hello</h2>
+	<div class="para">
+	<p>Hello</p>
+	<p>hiiiiii</p>
+	</div>
+	<input onclick = "myFunction()" type="button" value="Submit">
+
+	<input id="i1" type="text" name="text">
+	<p id="firstP">firstP<p>
+		<button onclick="addNode()">click</button>
+	
+	
+</body>
+</html>

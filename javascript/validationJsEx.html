@@ -1,0 +1,95 @@
+<html>
+    <head>
+<script>
+    function validate()
+    {
+        var name=f1.t1.value;
+        var pass=f1.t2.value;
+        var city=f1.t3.value;
+        var address=f1.t4.value;
+
+        if(name==null || name=="")
+        { 
+            alert("Enter your name");
+            //return 0;
+        }
+        if(pass==null || pass=="")
+        { 
+            alert("Enter your Password");
+            //return 0;
+        }
+
+        if((f1.gender[0].checked==false) && (f1.gender[1].checked==false))
+        { 
+            alert("Select your gender");
+            //return 0;
+        }
+
+        if((f1.Language[0].checked==false) && (f1.Language[1].checked==false) && (f1.Language[2].checked==false) && (f1.Language[3].checked==false))
+        { 
+            alert("Select the language");
+            //return 0;
+        }
+
+        if(city==0)
+        {
+            alert("Select City");
+        }
+        if(address==null || address=="")
+        {
+            alert("Enter your address");
+        }
+    }
+</script>
+    </head>
+    <body>
+        <center>
+        <form name="f1"> 
+            <table>
+                <tr>
+                    <td> Name : </td>
+                    <td><input type="text" name="t1"/></td>
+                </tr>
+                <tr>
+                    <td> Password : </td>
+                    <td><input type="password" name="t2"/></td>
+                </tr>
+                <tr>
+                    <td> Gender : </td>
+                    <td>
+                        <input type="radio"  name="gender">Male
+                        <input type="radio"  name="gender">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td> Language : </td>
+                    <td>
+                        <input type="checkbox" name="Language">Telagu
+                        <input type="checkbox" name="Language">Marathi
+                        <input type="checkbox" name="Language">English
+                        <input type="checkbox" name="Language">Hindi
+                    </td>
+                </tr>
+                <tr>
+                    <td> City : </td>
+                    <td>
+                        <select name="t3">
+                            <option>Hydrabad</option>
+                            <option>Mumbai</option>
+                            <option>Delhi</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                        <td> Address : </td>
+                        <td><textarea name="t4"></textarea></td>
+                    </tr>
+                    <tr>
+                            
+                            <td><input type="button" onclick="validate()" value="validate"/></td>
+                        </tr>
+            </table>
+        </form>
+    </center>
+    </body>
+</html>
